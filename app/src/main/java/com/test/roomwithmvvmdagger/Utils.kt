@@ -1,6 +1,7 @@
 package com.test.roomwithmvvmdagger
 
 import android.app.Activity
+import android.util.Patterns
 import android.view.Window
 import android.view.WindowManager
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -28,6 +29,8 @@ fun snackBar(msg: String, actionButtonName: String, constraintLayout: Constraint
         }
     snackbar.show()
 }
+
+fun CharSequence?.isValidEmail() = !isNullOrEmpty() && Patterns.EMAIL_ADDRESS.matcher(this).matches()
 
 
 

@@ -64,6 +64,4 @@ class AddUser : AppCompatActivity() {
         }
     }
 
-    fun CharSequence?.isValidEmail() =
-        !isNullOrEmpty() && Patterns.EMAIL_ADDRESS.matcher(this).matches()
 }
